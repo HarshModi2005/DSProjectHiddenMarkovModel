@@ -35,39 +35,65 @@ This project implements a Hidden Markov Model (HMM) to analyze and predict stock
    ./stock_prediction
    
 ##Input Format
+<br>
 The program reads stock data from a CSV file in the following format:
-
+<br>
 "Index Name","Date","Open","High","Low","Close"
+<br>
+
 Index Name: A string representing the stock index name.
+<br>
 Date: The date of the stock data.
+<br>
 Open: The opening price of the stock.
+<br>
 High: The highest price of the stock.
+<br>
 Low: The lowest price of the stock.
+<br>
 Close: The closing price of the stock.
+<br>
 
 ##Expected Output
+<br>
 
 Prediction for 10 days, Average Loss = 1.760682
+<br>
 Prediction for 20 days, Average Loss = 3.741657
+<br>
 Prediction for 30 days, Average Loss = 3.860052
+<br>
 Prediction for 40 days, Average Loss = 3.636619
+<br>
 Prediction for 50 days, Average Loss = 3.738984
+<br>
 Prediction for 60 days, Average Loss = 4.125126
+<br>
 Prediction for 70 days, Average Loss = 3.989271
+<br>
 Prediction for 80 days, Average Loss = 3.811168
+<br>
 Prediction for 90 days, Average Loss = 3.891586
+<br>
 Prediction for 100 days, Average Loss = 3.898718
+<br>
 
-##Notes
+##Notes<br>
+<br>
 
-Prediction Lengths: The program performs predictions for multiple lengths (e.g., 10, 20, ..., 100 days).
+Prediction Lengths: The program performs predictions for multiple lengths (e.g., 10, 20, ..., 100 days).<br>
 
-Adjustable Parameters:
-N and M: Number of states and observation symbols, respectively.
 
-MAX_T and MAX_ITER: Adjust the maximum time periods and Baum-Welch iterations if needed.
+Adjustable Parameters:<br>
 
-Data Size: Ensure MAX_T is large enough to accommodate the number of rows in your dataset.
+N and M: Number of states and observation symbols, respectively.<br>
+<br>
 
-Scaling and Convergence: The program uses scaling in the forward-backward steps to prevent numerical underflow. Convergence is checked with a tolerance of 1e-4.
+MAX_T and MAX_ITER: Adjust the maximum time periods and Baum-Welch iterations if needed.<br>
+<br>
+
+Data Size: Ensure MAX_T is large enough to accommodate the number of rows in your dataset.<br>
+
+
+Scaling and Convergence: The program uses scaling in the forward-backward steps to prevent numerical underflow. Convergence is checked with a tolerance of 1e-4.<br>
 
