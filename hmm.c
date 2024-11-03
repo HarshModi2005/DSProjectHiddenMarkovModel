@@ -426,6 +426,8 @@ int main() {
 
         // Calculate average loss
         double average_loss = loss / pred_len;
+        // Root the average loss
+        average_loss = sqrt(average_loss);
 
         // Report average loss
         printf("Prediction for %d days, Average Loss = %lf\n", pred_len, average_loss);
@@ -433,3 +435,4 @@ int main() {
 
     return 0;
 }
+
